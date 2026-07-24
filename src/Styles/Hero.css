@@ -1,0 +1,145 @@
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    background:linear-gradient(135deg,#eef5ff,#ffffff);
+}
+
+.hero-left{
+    width:52%;
+}
+
+.badge{
+    background:#dbeafe;
+    color:#2563eb;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.hero-left h1{
+    font-size:65px;
+    margin-top:25px;
+    line-height:1.2;
+    color:#111827;
+}
+
+.hero-left h1 span{
+    color:#2563eb;
+}
+
+.hero-left p{
+    margin:30px 0;
+    color:#6b7280;
+    font-size:18px;
+    line-height:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.primary-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 35px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+}
+
+.secondary-btn{
+    padding:16px 35px;
+    border:2px solid #2563eb;
+    background:white;
+    color:#2563eb;
+    border-radius:50px;
+    cursor:pointer;
+}
+
+.companies{
+    display:flex;
+    gap:30px;
+    margin-top:60px;
+    color:#9ca3af;
+    font-weight:bold;
+}
+
+.hero-right{
+    width:40%;
+    position:relative;
+}
+
+.resume-card{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+
+.resume-card h3{
+    color:#6b7280;
+}
+
+.resume-card h1{
+    color:#2563eb;
+    font-size:70px;
+    margin:20px 0;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#e5e7eb;
+    border-radius:20px;
+}
+
+.fill{
+    width:91%;
+    height:100%;
+    background:#2563eb;
+    border-radius:20px;
+}
+
+.floating-card{
+    position:absolute;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:white;
+    padding:15px 20px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card1{
+    top:-20px;
+    right:-20px;
+}
+
+.card2{
+    left:-40px;
+    top:220px;
+}
+
+.card3{
+    bottom:-20px;
+    right:30px;
+}
+
+.floating-card svg{
+    font-size:28px;
+    color:#2563eb;
+}
