@@ -1,17 +1,48 @@
-function FeatureCard({ icon, title, description }) {
-  return (
-    <div className="feature-card">
+import React from "react";
+import "../styles/FeatureCard.css";
 
-      <div className="feature-icon">
-        {icon}
-      </div>
 
-      <h3>{title}</h3>
+function FeatureCard({icon,title,description}){
 
-      <p>{description}</p>
 
-    </div>
-  );
+return(
+
+<div className="feature-card">
+
+
+<div className="feature-icon">
+
+{icon}
+
+</div>
+
+
+<h3>
+
+{title}
+
+</h3>
+
+
+<p>
+
+{description}
+
+</p>
+
+
+<button>
+
+Learn More
+
+</button>
+
+
+</div>
+
+)
+
 }
+
 
 export default FeatureCard;

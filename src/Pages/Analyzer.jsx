@@ -1,72 +1,161 @@
-import Navbar from "../Components/Navbar";
-import "./../styles/Analyzer.css";
+import React,{useState} from "react";
+import {useNavigate} from "react-router-dom";
 
-function Analyzer() {
-  return (
-    <>
-      <Navbar />
+import UploadBox from "../components/UploadBox";
+import Loader from "../components/Loader";
 
-      <div className="analyzer">
+import "../styles/Analyzer.css";
 
-        <h1>AI Resume Analyzer</h1>
-        <p>Upload your resume and get AI analysis.</p>
 
-        <div className="upload-box">
+function Analyzer(){
 
-          <input type="file" />
 
-          <button>Analyze Resume</button>
+const [loading,setLoading] = useState(false);
 
-        </div>
+const navigate = useNavigate();
 
-        <div className="result">
 
-          <div className="card">
-            <h2>ATS Score</h2>
-            <h1>91%</h1>
-          </div>
 
-          <div className="card">
-            <h2>Skills Found</h2>
+function startAnalysis(){
 
-            <ul>
-              <li>Java</li>
-              <li>React</li>
-              <li>Spring Boot</li>
-              <li>MySQL</li>
-            </ul>
 
-          </div>
+setLoading(true);
 
-          <div className="card">
-            <h2>Missing Skills</h2>
 
-            <ul>
-              <li>Docker</li>
-              <li>AWS</li>
-              <li>GitHub Actions</li>
-            </ul>
 
-          </div>
+setTimeout(()=>{
 
-          <div className="card">
-            <h2>AI Suggestions</h2>
 
-            <ul>
-              <li>Add more projects</li>
-              <li>Improve resume summary</li>
-              <li>Add certifications</li>
-              <li>Mention achievements</li>
-            </ul>
+setLoading(false);
 
-          </div>
 
-        </div>
+navigate("/dashboard");
 
-      </div>
 
-    </>
-  );
+},3000);
+
+
+
 }
+
+
+
+return(
+
+<div className="analyzer-page">
+
+
+
+<div className="analyzer-header">
+
+
+<h1>
+
+AI Resume Analyzer 🤖
+
+</h1>
+
+
+
+<p>
+
+Upload your resume and get instant AI powered feedback,
+ATS score and improvement suggestions.
+
+</p>
+
+
+</div>
+
+
+
+
+
+{
+
+loading ?
+
+
+<Loader/>
+
+
+:
+
+
+<div onClick={startAnalysis}>
+
+
+<UploadBox/>
+
+
+</div>
+
+
+}
+
+
+
+
+
+<div className="analyzer-features">
+
+
+
+<div>
+
+<h3>
+📊 ATS Score
+</h3>
+
+<p>
+Check your resume compatibility.
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<h3>
+🎯 Skill Detection
+</h3>
+
+<p>
+Find missing skills.
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<h3>
+✨ AI Suggestions
+</h3>
+
+<p>
+Improve resume quality.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+)
+
+}
+
 
 export default Analyzer;

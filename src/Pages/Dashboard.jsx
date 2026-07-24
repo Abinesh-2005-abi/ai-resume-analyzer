@@ -1,88 +1,276 @@
-import Navbar from "../Components/Navbar";
-import "./../styles/Dashboard.css";
+import React from "react";
+import SkillCard from "../components/SkillCard";
+import "../styles/Dashboard.css";
 
-function Dashboard() {
-  return (
-    <>
-      <Navbar />
 
-      <div className="dashboard">
+function Dashboard(){
 
-        <h1>Dashboard</h1>
-        <p>Welcome back! Here's your resume analysis summary.</p>
 
-        <div className="stats">
+const skills=[
 
-          <div className="box">
-            <h2>5</h2>
-            <p>Total Resumes</p>
-          </div>
+{
+skill:"Java",
+percentage:90,
+level:"Advanced"
+},
 
-          <div className="box">
-            <h2>91%</h2>
-            <p>Best ATS Score</p>
-          </div>
+{
+skill:"React",
+percentage:85,
+level:"Advanced"
+},
 
-          <div className="box">
-            <h2>12</h2>
-            <p>Skills Found</p>
-          </div>
+{
+skill:"Spring Boot",
+percentage:75,
+level:"Intermediate"
+},
 
-          <div className="box">
-            <h2>4</h2>
-            <p>Reports</p>
-          </div>
-
-        </div>
-
-        <div className="history">
-
-          <h2>Recent Analysis</h2>
-
-          <table>
-
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Resume</th>
-                <th>ATS Score</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <tr>
-                <td>24-07-2026</td>
-                <td>Resume.pdf</td>
-                <td>91%</td>
-                <td>Completed</td>
-              </tr>
-
-              <tr>
-                <td>22-07-2026</td>
-                <td>Java_Resume.pdf</td>
-                <td>87%</td>
-                <td>Completed</td>
-              </tr>
-
-              <tr>
-                <td>20-07-2026</td>
-                <td>Frontend_Resume.pdf</td>
-                <td>84%</td>
-                <td>Completed</td>
-              </tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </div>
-
-    </>
-  );
+{
+skill:"SQL",
+percentage:80,
+level:"Good"
 }
+
+];
+
+
+
+return(
+
+<div className="dashboard">
+
+
+<div className="dashboard-header">
+
+
+<h1>
+
+Resume Analysis Dashboard 📊
+
+</h1>
+
+
+<p>
+
+AI generated insights from your resume
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div className="dashboard-grid">
+
+
+
+<div className="score-card">
+
+
+<h2>
+
+ATS Score
+
+</h2>
+
+
+
+<div className="score-circle">
+
+85%
+
+</div>
+
+
+
+<h3>
+
+Excellent Resume
+
+</h3>
+
+
+
+<p>
+
+Your resume has a strong chance of passing ATS systems.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div className="summary-card">
+
+
+<h2>
+
+Resume Summary
+
+</h2>
+
+
+<p>
+
+Your resume shows strong programming skills with good project experience.
+Improve cloud knowledge and add more measurable achievements.
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<section className="skills-section">
+
+
+<h2>
+
+Detected Skills
+
+</h2>
+
+
+
+<div className="skills-container">
+
+
+{
+
+skills.map((item,index)=>(
+
+
+<SkillCard
+
+key={index}
+
+skill={item.skill}
+
+percentage={item.percentage}
+
+level={item.level}
+
+/>
+
+
+))
+
+}
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<div className="suggestion-card">
+
+
+<h2>
+
+AI Suggestions ✨
+
+</h2>
+
+
+
+<ul>
+
+<li>
+Add more project descriptions with numbers and results.
+</li>
+
+
+<li>
+Include industry keywords for better ATS ranking.
+</li>
+
+
+<li>
+Add GitHub and LinkedIn profile links.
+</li>
+
+
+<li>
+Improve your professional summary section.
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div className="missing-card">
+
+
+<h2>
+
+Recommended Skills
+
+</h2>
+
+
+<div className="missing-skills">
+
+
+<span>
+Docker
+</span>
+
+
+<span>
+AWS
+</span>
+
+
+<span>
+System Design
+</span>
+
+
+<span>
+Microservices
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+)
+
+}
+
 
 export default Dashboard;

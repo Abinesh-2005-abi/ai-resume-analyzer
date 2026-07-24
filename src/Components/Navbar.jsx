@@ -1,48 +1,60 @@
-import "./../styles/Navbar.css";
+import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/Navbar.css";
 
-function Navbar() {
-  return (
-    <nav className="navbar">
 
-      <div className="logo">
-        ResumeAI
-      </div>
+function Navbar(){
 
-      <ul className="nav-links">
+return(
 
-        <li>
-          <Link to="/">Home</Link>
-        </li>
+<nav className="navbar">
 
-        <li>
-          <Link to="/analyzer">Analyzer</Link>
-        </li>
 
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
+<div className="logo">
 
-      </ul>
+CodeTech <span>AI</span>
 
-      <div className="buttons">
+</div>
 
-        <Link to="/login">
-          <button className="login-btn">
-            Login
-          </button>
-        </Link>
 
-        <Link to="/signup">
-          <button className="signup-btn">
-            Get Started
-          </button>
-        </Link>
 
-      </div>
+<div className="nav-links">
 
-    </nav>
-  );
+
+<Link to="/">
+Home
+</Link>
+
+
+<Link to="/analyzer">
+Analyzer
+</Link>
+
+
+<Link to="/dashboard">
+Dashboard
+</Link>
+
+
+<Link to="/login">
+Login
+</Link>
+
+
+<Link to="/signup" className="signup-btn">
+Get Started
+</Link>
+
+
+
+</div>
+
+
+</nav>
+
+)
+
 }
+
 
 export default Navbar;

@@ -1,118 +1,133 @@
-import "./../styles/Hero.css";
-import { FaArrowRight } from "react-icons/fa";
-import { FaFileAlt } from "react-icons/fa";
-import { FaChartLine } from "react-icons/fa";
-import { FaRobot } from "react-icons/fa";
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/Hero.css";
 
-function Hero() {
-  return (
-    <section className="hero">
 
-      <div className="hero-left">
+function Hero(){
 
-        <span className="badge">
-          🚀 AI Powered Resume Analysis
-        </span>
+return(
 
-        <h1>
-          Build a Resume
-          <br />
-          That Gets
-          <span> You Hired.</span>
-        </h1>
+<section className="hero">
 
-        <p>
-          Upload your resume and receive an AI-powered ATS score,
-          personalized suggestions, skill gap analysis, and expert
-          recommendations to land your dream job.
-        </p>
 
-        <div className="hero-buttons">
+<div className="hero-content">
 
-          <button className="primary-btn">
-            Analyze Resume
-            <FaArrowRight />
-          </button>
 
-          <button className="secondary-btn">
-            Watch Demo
-          </button>
+<h1>
 
-        </div>
+Build a Resume That
 
-        <div className="companies">
+<br/>
 
-          <div>Google</div>
-          <div>Microsoft</div>
-          <div>Amazon</div>
-          <div>Infosys</div>
+<span>Gets You Hired</span>
 
-        </div>
+</h1>
 
-      </div>
 
-      <div className="hero-right">
 
-        <div className="resume-card">
+<p>
 
-          <h3>Resume Score</h3>
+CodeTech AI uses artificial intelligence to analyze your resume,
+check ATS compatibility, find skill gaps and provide smart
+recommendations to improve your career opportunities.
 
-          <h1>91%</h1>
+</p>
 
-          <div className="progress">
 
-            <div className="fill"></div>
 
-          </div>
+<div className="hero-buttons">
 
-        </div>
 
-        <div className="floating-card card1">
+<Link to="/analyzer">
 
-          <FaRobot />
+Analyze Resume
 
-          <div>
+</Link>
 
-            <h4>AI Analysis</h4>
 
-            <p>Completed</p>
 
-          </div>
+<Link to="/signup" className="outline-btn">
 
-        </div>
+Create Account
 
-        <div className="floating-card card2">
+</Link>
 
-          <FaChartLine />
 
-          <div>
+</div>
 
-            <h4>ATS Score</h4>
 
-            <p>Excellent</p>
 
-          </div>
+<div className="hero-stats">
 
-        </div>
 
-        <div className="floating-card card3">
+<div>
 
-          <FaFileAlt />
+<h3>
+95%
+</h3>
 
-          <div>
+<p>
+ATS Accuracy
+</p>
 
-            <h4>Skills</h4>
+</div>
 
-            <p>24 Detected</p>
 
-          </div>
 
-        </div>
+<div>
 
-      </div>
+<h3>
+10K+
+</h3>
 
-    </section>
-  );
+<p>
+Resumes Analyzed
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+24/7
+</h3>
+
+<p>
+AI Support
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div className="hero-image">
+
+
+<img 
+src="/hero.png"
+alt="AI Resume Analyzer"
+/>
+
+
+</div>
+
+
+
+</section>
+
+)
+
 }
+
 
 export default Hero;

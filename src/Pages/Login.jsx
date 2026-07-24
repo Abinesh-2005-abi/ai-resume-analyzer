@@ -1,50 +1,146 @@
-import Navbar from "../Components/Navbar";
-import "./../styles/Login.css";
-import { Link } from "react-router-dom";
+import React, {useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import "../styles/Login.css";
 
-function Login() {
-  return (
-    <>
-      <Navbar />
 
-      <div className="login-container">
+function Login(){
 
-        <div className="login-box">
 
-          <h1>Login</h1>
-          <p>Login to your ResumeAI account</p>
+const navigate = useNavigate();
 
-          <form>
 
-            <label>Email</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-            />
+const [email,setEmail] = useState("");
 
-            <label>Password</label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-            />
+const [password,setPassword] = useState("");
 
-            <button type="submit">
-              Login
-            </button>
 
-          </form>
 
-          <p className="signup-link">
-            Don't have an account?
-            <Link to="/signup"> Signup</Link>
-          </p>
+function handleLogin(e){
 
-        </div>
+e.preventDefault();
 
-      </div>
 
-    </>
-  );
+if(email && password){
+
+navigate("/dashboard");
+
 }
+
+}
+
+
+
+return(
+
+<div className="login-page">
+
+
+<div className="login-box">
+
+
+<div className="login-logo">
+
+CodeTech <span>AI</span>
+
+</div>
+
+
+
+<h1>
+
+Welcome Back 👋
+
+</h1>
+
+
+
+<p>
+
+Login to analyze your resume with AI
+
+</p>
+
+
+
+
+<form onSubmit={handleLogin}>
+
+
+<input
+
+type="email"
+
+placeholder="Enter Email"
+
+value={email}
+
+onChange={(e)=>setEmail(e.target.value)}
+
+/>
+
+
+
+
+<input
+
+type="password"
+
+placeholder="Enter Password"
+
+value={password}
+
+onChange={(e)=>setPassword(e.target.value)}
+
+/>
+
+
+
+
+
+<button type="submit">
+
+Login
+
+</button>
+
+
+
+</form>
+
+
+
+
+<div className="forgot">
+
+Forgot Password?
+
+</div>
+
+
+
+<p className="account">
+
+Don't have an account?
+
+<Link to="/signup">
+
+ Signup
+
+</Link>
+
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+)
+
+}
+
 
 export default Login;

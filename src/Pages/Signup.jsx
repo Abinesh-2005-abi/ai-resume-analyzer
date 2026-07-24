@@ -1,61 +1,172 @@
-import Navbar from "../Components/Navbar";
-import "./../styles/Signup.css";
-import { Link } from "react-router-dom";
+import React,{useState} from "react";
+import {Link,useNavigate} from "react-router-dom";
+import "../styles/Signup.css";
 
-function Signup() {
-  return (
-    <>
-      <Navbar />
 
-      <div className="signup-container">
+function Signup(){
 
-        <div className="signup-box">
 
-          <h1>Create Account</h1>
-          <p>Join ResumeAI and start analyzing your resume.</p>
+const navigate = useNavigate();
 
-          <form>
 
-            <label>Full Name</label>
-            <input
-              type="text"
-              placeholder="Enter your full name"
-            />
+const [name,setName] = useState("");
 
-            <label>Email</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-            />
+const [email,setEmail] = useState("");
 
-            <label>Password</label>
-            <input
-              type="password"
-              placeholder="Create a password"
-            />
+const [mobile,setMobile] = useState("");
 
-            <label>Confirm Password</label>
-            <input
-              type="password"
-              placeholder="Confirm your password"
-            />
+const [password,setPassword] = useState("");
 
-            <button type="submit">
-              Create Account
-            </button>
 
-          </form>
 
-          <p className="login-link">
-            Already have an account?
-            <Link to="/login"> Login</Link>
-          </p>
 
-        </div>
+function handleSignup(e){
 
-      </div>
-    </>
-  );
+e.preventDefault();
+
+
+if(name && email && mobile && password){
+
+navigate("/login");
+
 }
+
+}
+
+
+
+return(
+
+<div className="signup-page">
+
+
+<div className="signup-box">
+
+
+
+<div className="signup-logo">
+
+CodeTech <span>AI</span>
+
+</div>
+
+
+
+<h1>
+
+Create Account 🚀
+
+</h1>
+
+
+
+<p>
+
+Start your AI resume improvement journey
+
+</p>
+
+
+
+
+<form onSubmit={handleSignup}>
+
+
+<input
+
+type="text"
+
+placeholder="Full Name"
+
+value={name}
+
+onChange={(e)=>setName(e.target.value)}
+
+/>
+
+
+
+<input
+
+type="email"
+
+placeholder="Email Address"
+
+value={email}
+
+onChange={(e)=>setEmail(e.target.value)}
+
+/>
+
+
+
+
+<input
+
+type="tel"
+
+placeholder="Mobile Number"
+
+value={mobile}
+
+onChange={(e)=>setMobile(e.target.value)}
+
+/>
+
+
+
+
+<input
+
+type="password"
+
+placeholder="Create Password"
+
+value={password}
+
+onChange={(e)=>setPassword(e.target.value)}
+
+/>
+
+
+
+
+<button type="submit">
+
+Create Account
+
+</button>
+
+
+
+</form>
+
+
+
+<p className="login-text">
+
+Already have an account?
+
+
+<Link to="/login">
+
+ Login
+
+</Link>
+
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+)
+
+}
+
 
 export default Signup;
