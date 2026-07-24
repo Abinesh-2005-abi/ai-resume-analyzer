@@ -1,131 +1,85 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Hero.css";
+import hero from "../assets/image.jpg";
 
 
-function Hero(){
+function Hero() {
 
-return(
+  return (
 
-<section className="hero">
+    <section className="hero">
 
+      <div className="hero-content">
 
-<div className="hero-content">
+        <h1>
+          Build a Resume That
+          <br />
+          <span>Gets You Hired</span>
+        </h1>
 
 
-<h1>
+        <p>
+          CodeTech AI uses artificial intelligence to analyze your resume,
+          check ATS compatibility, find skill gaps and provide smart
+          recommendations to improve your career opportunities.
+        </p>
 
-Build a Resume That
 
-<br/>
+        <div className="hero-buttons">
 
-<span>Gets You Hired</span>
+          <Link to="/analyzer" className="primary-btn">
+            Analyze Resume
+          </Link>
 
-</h1>
 
+          <Link to="/signup" className="outline-btn">
+            Create Account
+          </Link>
 
+        </div>
 
-<p>
 
-CodeTech AI uses artificial intelligence to analyze your resume,
-check ATS compatibility, find skill gaps and provide smart
-recommendations to improve your career opportunities.
+        <div className="hero-stats">
 
-</p>
+          <div className="stat-box">
+            <h3>95%</h3>
+            <p>ATS Accuracy</p>
+          </div>
 
 
+          <div className="stat-box">
+            <h3>10K+</h3>
+            <p>Resumes Analyzed</p>
+          </div>
 
-<div className="hero-buttons">
 
+          <div className="stat-box">
+            <h3>24/7</h3>
+            <p>AI Support</p>
+          </div>
 
-<Link to="/analyzer">
 
-Analyze Resume
+        </div>
 
-</Link>
 
+      </div>
 
 
-<Link to="/signup" className="outline-btn">
 
-Create Account
+      <div className="hero-image">
 
-</Link>
+        <img 
+          src={hero}
+          alt="AI Resume Analyzer"
+        />
 
+      </div>
 
-</div>
 
+    </section>
 
-
-<div className="hero-stats">
-
-
-<div>
-
-<h3>
-95%
-</h3>
-
-<p>
-ATS Accuracy
-</p>
-
-</div>
-
-
-
-<div>
-
-<h3>
-10K+
-</h3>
-
-<p>
-Resumes Analyzed
-</p>
-
-</div>
-
-
-
-<div>
-
-<h3>
-24/7
-</h3>
-
-<p>
-AI Support
-</p>
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-<div className="hero-image">
-
-
-<img 
-src="/hero.png"
-alt="AI Resume Analyzer"
-/>
-
-
-</div>
-
-
-
-</section>
-
-)
+  );
 
 }
 

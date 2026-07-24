@@ -1,274 +1,209 @@
-import React from "react";
-import SkillCard from "../components/SkillCard";
+import React, { useEffect, useState } from "react";
 import "../styles/Dashboard.css";
 
 
 function Dashboard(){
 
 
-const skills=[
+    const [resume,setResume] = useState(null);
 
-{
-skill:"Java",
-percentage:90,
-level:"Advanced"
-},
 
-{
-skill:"React",
-percentage:85,
-level:"Advanced"
-},
 
-{
-skill:"Spring Boot",
-percentage:75,
-level:"Intermediate"
-},
+    useEffect(()=>{
 
-{
-skill:"SQL",
-percentage:80,
-level:"Good"
-}
 
-];
+        const data = localStorage.getItem(
+            "resumeAnalysis"
+        );
 
 
+        if(data){
 
-return(
+            setResume(JSON.parse(data));
 
-<div className="dashboard">
+        }
 
 
-<div className="dashboard-header">
+    },[]);
 
 
-<h1>
 
-Resume Analysis Dashboard 📊
 
-</h1>
+    return(
 
 
-<p>
+        <div className="dashboard">
 
-AI generated insights from your resume
 
-</p>
+            <h1>
+                Resume Dashboard 📊
+            </h1>
 
 
-</div>
 
 
+            {
 
+                resume ?
 
 
-<div className="dashboard-grid">
+                (
 
+                    <div className="dashboard-content">
 
 
-<div className="score-card">
 
+                        <div className="resume-card">
 
-<h2>
 
-ATS Score
+                            <h2>
+                                Uploaded Resume
+                            </h2>
 
-</h2>
 
+                            <p>
+                                {resume.fileName}
+                            </p>
 
 
-<div className="score-circle">
+                        </div>
 
-85%
 
-</div>
 
 
 
-<h3>
+                        <div className="score-card">
 
-Excellent Resume
 
-</h3>
+                            <h2>
+                                ATS Score
+                            </h2>
 
 
+                            <h1>
+                                {resume.score}
+                            </h1>
 
-<p>
 
-Your resume has a strong chance of passing ATS systems.
+                        </div>
 
-</p>
 
 
-</div>
 
 
 
 
+                        <div className="result-card">
 
-<div className="summary-card">
 
+                            <h2>
+                                Skills Found
+                            </h2>
 
-<h2>
 
-Resume Summary
+                            {
 
-</h2>
+                                resume.skills.map(
 
+                                    (skill,index)=>(
 
-<p>
+                                        <p key={index}>
+                                            ✅ {skill}
+                                        </p>
 
-Your resume shows strong programming skills with good project experience.
-Improve cloud knowledge and add more measurable achievements.
+                                    )
 
-</p>
+                                )
 
+                            }
 
-</div>
 
+                        </div>
 
 
 
-</div>
 
 
 
 
+                        <div className="result-card">
 
-<section className="skills-section">
 
+                            <h2>
+                                Missing Skills
+                            </h2>
 
-<h2>
 
-Detected Skills
 
-</h2>
+                            {
 
+                                resume.missingSkills.map(
 
+                                    (skill,index)=>(
 
-<div className="skills-container">
+                                        <p key={index}>
+                                            ❌ {skill}
+                                        </p>
 
+                                    )
 
-{
+                                )
 
-skills.map((item,index)=>(
+                            }
 
 
-<SkillCard
 
-key={index}
+                        </div>
 
-skill={item.skill}
 
-percentage={item.percentage}
 
-level={item.level}
 
-/>
 
 
-))
 
-}
+                        <div className="suggestion-card">
 
 
-</div>
+                            <h2>
+                                AI Suggestions
+                            </h2>
 
 
-</section>
+                            <p>
+                                💡 {resume.suggestion}
+                            </p>
 
 
+                        </div>
 
 
 
-<div className="suggestion-card">
+                    </div>
 
 
-<h2>
+                )
 
-AI Suggestions ✨
 
-</h2>
+                :
 
 
+                (
 
-<ul>
+                    <h2>
+                        No Resume Uploaded
+                    </h2>
 
-<li>
-Add more project descriptions with numbers and results.
-</li>
+                )
 
+            }
 
-<li>
-Include industry keywords for better ATS ranking.
-</li>
 
 
-<li>
-Add GitHub and LinkedIn profile links.
-</li>
+        </div>
 
 
-<li>
-Improve your professional summary section.
-</li>
+    );
 
-
-</ul>
-
-
-</div>
-
-
-
-
-
-<div className="missing-card">
-
-
-<h2>
-
-Recommended Skills
-
-</h2>
-
-
-<div className="missing-skills">
-
-
-<span>
-Docker
-</span>
-
-
-<span>
-AWS
-</span>
-
-
-<span>
-System Design
-</span>
-
-
-<span>
-Microservices
-</span>
-
-
-</div>
-
-
-</div>
-
-
-
-
-</div>
-
-)
 
 }
 

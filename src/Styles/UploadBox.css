@@ -1,222 +1,39 @@
 .upload-box{
 
-width:500px;
-
-max-width:100%;
-
-padding:45px 35px;
-
-background:white;
-
-border-radius:30px;
-
-box-shadow:
-
-0 15px 40px rgba(0,0,0,0.1);
-
-margin:auto;
-
-text-align:center;
+    width:450px;
+    margin:50px auto;
+    padding:40px;
+    background:white;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 
 }
 
 
+.upload-box input{
 
-.upload-icon{
-
-font-size:60px;
-
-margin-bottom:20px;
+    margin:20px 0;
+    padding:10px;
 
 }
 
 
+.upload-box button{
 
-.upload-box h2{
-
-font-size:30px;
-
-color:#0f172a;
-
-margin-bottom:15px;
-
-}
-
-
-
-.upload-box p{
-
-color:#64748b;
-
-line-height:1.6;
-
-margin-bottom:25px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:25px;
+    cursor:pointer;
 
 }
 
 
+.file-name{
 
-.file-label{
-
-display:inline-block;
-
-background:#eff6ff;
-
-color:#2563eb;
-
-padding:15px 35px;
-
-border-radius:30px;
-
-font-weight:600;
-
-cursor:pointer;
-
-border:2px dashed #2563eb;
-
-}
-
-
-
-.file-label input{
-
-display:none;
-
-}
-
-
-
-.selected-file{
-
-margin:25px 0;
-
-background:#f1f5f9;
-
-padding:15px;
-
-border-radius:15px;
-
-}
-
-
-
-.selected-file p{
-
-margin:0;
-
-font-size:14px;
-
-}
-
-
-
-.selected-file span{
-
-color:#2563eb;
-
-font-weight:bold;
-
-}
-
-
-
-.analyze-btn{
-
-width:100%;
-
-margin-top:20px;
-
-padding:15px;
-
-border:none;
-
-border-radius:30px;
-
-background:#2563eb;
-
-color:white;
-
-font-size:17px;
-
-font-weight:600;
-
-transition:0.3s;
-
-}
-
-
-
-.analyze-btn:hover{
-
-background:#1d4ed8;
-
-transform:translateY(-3px);
-
-}
-
-
-
-
-.upload-info{
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-margin-top:30px;
-
-flex-wrap:wrap;
-
-}
-
-
-
-.upload-info div{
-
-background:#f8fafc;
-
-padding:10px 15px;
-
-border-radius:20px;
-
-font-size:14px;
-
-color:#16a34a;
-
-}
-
-
-
-
-
-@media(max-width:600px){
-
-
-.upload-box{
-
-padding:35px 20px;
-
-}
-
-
-
-.upload-box h2{
-
-font-size:24px;
-
-}
-
-
-
-.upload-info{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
+    margin:15px;
+    color:#2563eb;
 
 }

@@ -5,24 +5,69 @@ import Features from "../components/Features";
 import HowItWorks from "../components/HowItWorks";
 import Testimonial from "../components/Testimonial";
 
+import "../styles/Home.css";
+
 
 function Home(){
 
-return(
+  return(
 
-<>
+    <div className="home">
 
-<Hero/>
+      <Hero />
 
-<Features/>
+      <section className="stats-section">
 
-<HowItWorks/>
+        <div className="stat-card">
+          <h2>10K+</h2>
+          <p>Resumes Analyzed</p>
+        </div>
 
-<Testimonial/>
+        <div className="stat-card">
+          <h2>95%</h2>
+          <p>ATS Accuracy</p>
+        </div>
 
-</>
+        <div className="stat-card">
+          <h2>50+</h2>
+          <p>Skills Detected</p>
+        </div>
 
-)
+        <div className="stat-card">
+          <h2>24/7</h2>
+          <p>AI Assistance</p>
+        </div>
+
+      </section>
+
+
+      <Features />
+
+
+      <section className="why-section">
+
+        <h2>
+          Why Choose CodeTech AI?
+        </h2>
+
+        <p>
+          Our AI-powered resume analyzer helps students and
+          professionals improve their resumes, increase ATS scores,
+          and identify missing skills required for their dream jobs.
+        </p>
+
+      </section>
+
+
+      <HowItWorks />
+
+
+      <Testimonial />
+
+
+    </div>
+
+  );
 
 }
 

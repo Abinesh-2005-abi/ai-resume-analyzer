@@ -9,151 +9,119 @@ import "../styles/Analyzer.css";
 
 function Analyzer(){
 
+    const [loading,setLoading] = useState(false);
 
-const [loading,setLoading] = useState(false);
+    const navigate = useNavigate();
 
-const navigate = useNavigate();
 
 
+    function startAnalysis(){
 
-function startAnalysis(){
 
+        setLoading(true);
 
-setLoading(true);
 
+        setTimeout(()=>{
 
+            setLoading(false);
 
-setTimeout(()=>{
+            navigate("/dashboard");
 
+        },3000);
 
-setLoading(false);
 
+    }
 
-navigate("/dashboard");
 
 
-},3000);
+    return(
 
+        <div className="analyzer-page">
 
 
-}
+            <div className="analyzer-header">
 
 
+                <h1>
+                    AI Resume Analyzer 🤖
+                </h1>
 
-return(
 
-<div className="analyzer-page">
+                <p>
+                    Upload your resume and get instant AI powered feedback,
+                    ATS score and improvement suggestions.
+                </p>
 
 
+            </div>
 
-<div className="analyzer-header">
 
 
-<h1>
+            {
+                loading ?
 
-AI Resume Analyzer 🤖
+                <Loader/>
 
-</h1>
+                :
 
+                <UploadBox />
 
+            }
 
-<p>
 
-Upload your resume and get instant AI powered feedback,
-ATS score and improvement suggestions.
 
-</p>
 
+            <div className="analyzer-features">
 
-</div>
 
+                <div>
 
+                    <h3>
+                        📊 ATS Score
+                    </h3>
 
+                    <p>
+                        Check your resume compatibility.
+                    </p>
 
+                </div>
 
-{
 
-loading ?
 
+                <div>
 
-<Loader/>
+                    <h3>
+                        🎯 Skill Detection
+                    </h3>
 
+                    <p>
+                        Find missing skills.
+                    </p>
 
-:
+                </div>
 
 
-<div onClick={startAnalysis}>
 
 
-<UploadBox/>
+                <div>
 
+                    <h3>
+                        ✨ AI Suggestions
+                    </h3>
 
-</div>
+                    <p>
+                        Improve resume quality.
+                    </p>
 
+                </div>
 
-}
 
+            </div>
 
 
+        </div>
 
-
-<div className="analyzer-features">
-
-
-
-<div>
-
-<h3>
-📊 ATS Score
-</h3>
-
-<p>
-Check your resume compatibility.
-</p>
-
-</div>
-
-
-
-
-<div>
-
-<h3>
-🎯 Skill Detection
-</h3>
-
-<p>
-Find missing skills.
-</p>
-
-</div>
-
-
-
-
-<div>
-
-<h3>
-✨ AI Suggestions
-</h3>
-
-<p>
-Improve resume quality.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-)
+    )
 
 }
 

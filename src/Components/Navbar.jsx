@@ -12,7 +12,7 @@ return(
 
 <div className="logo">
 
-CodeTech <span>AI</span>
+CodeTech <span>AI Resume Analyzer</span>
 
 </div>
 

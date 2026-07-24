@@ -1,142 +1,169 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/UploadBox.css";
 
 
 function UploadBox(){
 
+    const [file, setFile] = useState(null);
 
-const [file,setFile] = useState(null);
+    const navigate = useNavigate();
 
 
 
-function handleUpload(e){
+    const handleFileChange = (e)=>{
 
-setFile(e.target.files[0]);
+        const selectedFile = e.target.files[0];
 
-}
+        if(selectedFile){
 
+            setFile(selectedFile);
 
+        }
 
-return(
+    };
 
-<div className="upload-box">
 
 
-<div className="upload-icon">
+    const analyzeResume = ()=>{
 
-📄
 
-</div>
+        if(!file){
 
+            alert("Please upload your resume first");
 
+            return;
 
-<h2>
+        }
 
-Upload Your Resume
 
-</h2>
 
+        const analysisData = {
 
 
-<p>
+            fileName: file.name,
 
-Upload PDF, DOC or DOCX file to analyze your resume with AI.
 
-</p>
+            score:"87%",
 
 
+            skills:[
 
+                "Java",
+                "React",
+                "JavaScript",
+                "SQL"
 
-<label className="file-label">
+            ],
 
 
-Choose Resume
 
+            missingSkills:[
 
-<input
+                "AWS",
+                "Docker",
+                "System Design"
 
-type="file"
+            ],
 
-accept=".pdf,.doc,.docx"
 
-onChange={handleUpload}
 
-/>
+            suggestion:
 
+            "Add more project details and measurable achievements."
 
-</label>
 
 
+        };
 
 
 
-{
+        localStorage.setItem(
 
-file &&
+            "resumeAnalysis",
 
-<div className="selected-file">
+            JSON.stringify(analysisData)
 
+        );
 
-<p>
-Selected File:
-</p>
 
 
-<span>
+        navigate("/dashboard");
 
-{file.name}
 
-</span>
+    };
 
 
-</div>
 
 
-}
 
+    return(
 
 
+        <div className="upload-box">
 
-<button className="analyze-btn">
 
-Analyze Resume
+            <h2>
+                Upload Your Resume
+            </h2>
 
-</button>
 
 
+            <p>
+                Upload your resume and get AI analysis
+            </p>
 
-<div className="upload-info">
 
 
-<div>
 
-✔ ATS Score
+            <input
 
-</div>
+                type="file"
 
+                accept=".pdf,.doc,.docx"
 
-<div>
+                onChange={handleFileChange}
 
-✔ Skill Analysis
+            />
 
-</div>
 
 
-<div>
 
-✔ AI Suggestions
 
-</div>
+            {
 
+                file &&
 
-</div>
+                <p className="file-name">
 
+                    Selected File :
+                    <b> {file.name}</b>
 
+                </p>
 
+            }
 
-</div>
 
-)
+
+
+            <button
+
+                onClick={analyzeResume}
+
+            >
+
+                Analyze Resume
+
+            </button>
+
+
+
+
+        </div>
+
+
+    );
+
 
 }
 
