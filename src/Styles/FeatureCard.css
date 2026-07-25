@@ -1,103 +1,56 @@
 .feature-card{
-
-width:290px;
-
-padding:35px 25px;
-
-background:white;
-
-border-radius:25px;
-
-box-shadow:
-
-0 10px 30px rgba(0,0,0,0.08);
-
-transition:0.3s;
-
-border:1px solid #f1f5f9;
-
+    width:290px;
+    padding:35px 25px;
+    background:#FFFFFF;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    transition:all 0.3s ease;
+    border-top:4px solid #F59E0B;
 }
-
-
 
 .feature-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:
-
-0 15px 35px rgba(37,99,235,0.15);
-
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.20);
 }
-
-
 
 .feature-icon{
-
-font-size:50px;
-
-margin-bottom:20px;
-
+    font-size:50px;
+    margin-bottom:20px;
+    color:#F59E0B;
 }
-
-
 
 .feature-card h3{
-
-font-size:23px;
-
-color:#1e293b;
-
-margin-bottom:15px;
-
+    font-size:23px;
+    color:#111827;
+    margin-bottom:15px;
 }
-
-
 
 .feature-card p{
-
-color:#64748b;
-
-line-height:1.7;
-
-margin-bottom:25px;
-
+    color:#6B7280;
+    line-height:1.7;
+    margin-bottom:25px;
 }
-
-
 
 .feature-card button{
-
-background:#2563eb;
-
-color:white;
-
-border:none;
-
-padding:10px 25px;
-
-border-radius:25px;
-
+    background:#F59E0B;
+    color:#111827;
+    border:none;
+    padding:10px 25px;
+    border-radius:25px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s ease;
 }
-
-
 
 .feature-card button:hover{
-
-background:#1d4ed8;
-
+    background:#FBBF24;
+    transform:scale(1.05);
 }
-
-
 
 @media(max-width:700px){
 
-
-.feature-card{
-
-width:90%;
-
-}
-
+    .feature-card{
+        width:90%;
+    }
 
 }

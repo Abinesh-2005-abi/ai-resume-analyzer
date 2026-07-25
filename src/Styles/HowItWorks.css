@@ -1,169 +1,87 @@
 .how-section{
-
-padding:90px 8%;
-
-background:#f8fafc;
-
-text-align:center;
-
+    padding:90px 8%;
+    background:#F9FAFB;
+    text-align:center;
 }
-
-
 
 .how-section h1{
-
-font-size:42px;
-
-color:#0f172a;
-
-margin-bottom:15px;
-
+    font-size:42px;
+    color:#111827;
+    margin-bottom:15px;
 }
-
-
 
 .how-subtitle{
-
-font-size:18px;
-
-color:#64748b;
-
-margin-bottom:60px;
-
+    font-size:18px;
+    color:#6B7280;
+    margin-bottom:60px;
 }
-
-
 
 .steps-container{
-
-display:flex;
-
-justify-content:center;
-
-gap:35px;
-
-flex-wrap:wrap;
-
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
 }
-
-
 
 .step-card{
-
-background:white;
-
-width:320px;
-
-padding:40px 30px;
-
-border-radius:25px;
-
-box-shadow:
-
-0 10px 30px rgba(0,0,0,0.08);
-
-position:relative;
-
-transition:0.3s;
-
+    background:#FFFFFF;
+    width:320px;
+    padding:40px 30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    border-top:4px solid #F59E0B;
+    position:relative;
+    transition:all 0.3s ease;
 }
-
-
 
 .step-card:hover{
-
-transform:translateY(-8px);
-
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
 }
-
-
 
 .step-icon{
-
-font-size:45px;
-
-margin-bottom:20px;
-
+    font-size:45px;
+    margin-bottom:20px;
+    color:#F59E0B;
 }
-
-
 
 .step-number{
-
-position:absolute;
-
-top:20px;
-
-right:25px;
-
-font-size:18px;
-
-font-weight:bold;
-
-color:#2563eb;
-
+    position:absolute;
+    top:20px;
+    right:25px;
+    font-size:18px;
+    font-weight:bold;
+    color:#F59E0B;
 }
-
-
 
 .step-card h3{
-
-font-size:25px;
-
-color:#1e293b;
-
-margin-bottom:15px;
-
+    font-size:25px;
+    color:#111827;
+    margin-bottom:15px;
 }
-
-
 
 .step-card p{
-
-color:#64748b;
-
-line-height:1.7;
-
+    color:#6B7280;
+    line-height:1.7;
 }
-
-
-
-
 
 @media(max-width:700px){
 
+    .how-section{
+        padding:60px 5%;
+    }
 
-.how-section{
+    .how-section h1{
+        font-size:32px;
+    }
 
-padding:60px 5%;
+    .steps-container{
+        flex-direction:column;
+        align-items:center;
+    }
 
-}
-
-
-
-.how-section h1{
-
-font-size:32px;
-
-}
-
-
-
-.steps-container{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-
-
-.step-card{
-
-width:90%;
-
-}
-
+    .step-card{
+        width:90%;
+    }
 
 }

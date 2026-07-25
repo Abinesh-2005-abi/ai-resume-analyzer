@@ -1,162 +1,83 @@
 .testimonial{
-
-padding:90px 8%;
-
-background:white;
-
-text-align:center;
-
+    padding:90px 8%;
+    background:#F9FAFB;
+    text-align:center;
 }
-
-
 
 .testimonial h1{
-
-font-size:42px;
-
-color:#0f172a;
-
-margin-bottom:15px;
-
+    font-size:42px;
+    color:#111827;
+    margin-bottom:15px;
 }
-
-
 
 .testimonial-subtitle{
-
-color:#64748b;
-
-font-size:18px;
-
-margin-bottom:60px;
-
+    color:#6B7280;
+    font-size:18px;
+    margin-bottom:60px;
 }
-
-
 
 .testimonial-container{
-
-display:flex;
-
-justify-content:center;
-
-gap:30px;
-
-flex-wrap:wrap;
-
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
 }
-
-
-
 
 .testimonial-card{
-
-width:320px;
-
-padding:35px 25px;
-
-background:#f8fafc;
-
-border-radius:25px;
-
-box-shadow:
-
-0 10px 30px rgba(0,0,0,0.08);
-
-transition:0.3s;
-
+    width:320px;
+    padding:35px 25px;
+    background:#FFFFFF;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    border-top:4px solid #F59E0B;
+    transition:all 0.3s ease;
 }
-
-
 
 .testimonial-card:hover{
-
-transform:translateY(-8px);
-
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
 }
-
-
 
 .user-image{
-
-font-size:55px;
-
-margin-bottom:20px;
-
+    font-size:55px;
+    margin-bottom:20px;
 }
-
-
 
 .testimonial-card h3{
-
-font-size:22px;
-
-color:#1e293b;
-
-margin-bottom:8px;
-
+    font-size:22px;
+    color:#111827;
+    margin-bottom:8px;
 }
-
-
 
 .testimonial-card span{
-
-color:#2563eb;
-
-font-size:15px;
-
-font-weight:600;
-
+    color:#F59E0B;
+    font-size:15px;
+    font-weight:600;
 }
-
-
 
 .testimonial-card p{
-
-color:#64748b;
-
-line-height:1.7;
-
-margin:20px 0;
-
+    color:#6B7280;
+    line-height:1.7;
+    margin:20px 0;
 }
-
-
 
 .stars{
-
-font-size:18px;
-
+    font-size:18px;
+    color:#FBBF24;
 }
-
-
-
-
 
 @media(max-width:700px){
 
+    .testimonial{
+        padding:60px 5%;
+    }
 
-.testimonial{
+    .testimonial h1{
+        font-size:32px;
+    }
 
-padding:60px 5%;
-
-}
-
-
-
-.testimonial h1{
-
-font-size:32px;
-
-}
-
-
-
-.testimonial-card{
-
-width:90%;
-
-}
-
+    .testimonial-card{
+        width:90%;
+    }
 
 }

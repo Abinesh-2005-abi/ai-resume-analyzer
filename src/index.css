@@ -4,73 +4,69 @@
     box-sizing:border-box;
 }
 
-
 body{
-
     font-family:
     "Poppins",
     "Segoe UI",
     sans-serif;
 
-    background:#f8fafc;
-
-    color:#1e293b;
-
+    background:#F9FAFB;
+    color:#111827;
 }
-
 
 html{
-
     scroll-behavior:smooth;
-
 }
-
 
 a{
-
     text-decoration:none;
-
+    color:inherit;
+    transition:0.3s ease;
 }
-
 
 img{
-
     max-width:100%;
-
+    display:block;
 }
-
 
 button{
-
     cursor:pointer;
-
     font-family:inherit;
-
+    transition:0.3s ease;
 }
-
 
 .container{
-
     width:90%;
-
     max-width:1200px;
-
     margin:auto;
-
 }
 
+/* Scrollbar */
 
 ::-webkit-scrollbar{
-
-    width:8px;
-
+    width:10px;
 }
 
+::-webkit-scrollbar-track{
+    background:#E5E7EB;
+}
 
 ::-webkit-scrollbar-thumb{
-
-    background:#2563eb;
-
+    background:linear-gradient(
+        180deg,
+        #F59E0B,
+        #FBBF24
+    );
     border-radius:20px;
+}
 
+::-webkit-scrollbar-thumb:hover{
+    background:#D97706;
+}
+
+/* Text Selection */
+
+::selection{
+    background:#F59E0B;
+    color:#111827;
 }

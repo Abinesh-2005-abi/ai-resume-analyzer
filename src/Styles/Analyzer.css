@@ -1,150 +1,77 @@
 .analyzer-page{
-
-min-height:90vh;
-
-padding:70px 8%;
-
-background:
-
-linear-gradient(
-120deg,
-#eff6ff,
-#f8fafc
-);
-
-text-align:center;
-
+    min-height:90vh;
+    padding:70px 8%;
+    background:linear-gradient(120deg, #F9FAFB, #E5E7EB);
+    text-align:center;
 }
-
-
 
 .analyzer-header{
-
-margin-bottom:50px;
-
+    margin-bottom:50px;
 }
-
-
 
 .analyzer-header h1{
-
-font-size:45px;
-
-color:#0f172a;
-
-margin-bottom:15px;
-
+    font-size:45px;
+    color:#111827;
+    margin-bottom:15px;
 }
-
-
 
 .analyzer-header p{
-
-font-size:18px;
-
-color:#64748b;
-
-max-width:700px;
-
-margin:auto;
-
-line-height:1.7;
-
+    font-size:18px;
+    color:#6B7280;
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
 }
-
-
-
-
 
 .analyzer-features{
-
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-margin-top:60px;
-
-flex-wrap:wrap;
-
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:60px;
+    flex-wrap:wrap;
 }
-
-
-
 
 .analyzer-features div{
-
-background:white;
-
-width:250px;
-
-padding:25px;
-
-border-radius:20px;
-
-box-shadow:
-
-0 10px 25px rgba(0,0,0,0.08);
-
+    background:#FFFFFF;
+    width:250px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    border-top:4px solid #F59E0B;
+    transition:0.3s ease;
 }
 
-
+.analyzer-features div:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
+}
 
 .analyzer-features h3{
-
-color:#2563eb;
-
-margin-bottom:10px;
-
+    color:#F59E0B;
+    margin-bottom:10px;
 }
-
-
 
 .analyzer-features p{
-
-color:#64748b;
-
+    color:#6B7280;
 }
-
-
-
-
 
 @media(max-width:700px){
 
+    .analyzer-page{
+        padding:50px 5%;
+    }
 
-.analyzer-page{
+    .analyzer-header h1{
+        font-size:32px;
+    }
 
-padding:50px 5%;
+    .analyzer-features{
+        flex-direction:column;
+        align-items:center;
+    }
 
-}
-
-
-
-.analyzer-header h1{
-
-font-size:32px;
-
-}
-
-
-
-.analyzer-features{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-
-
-.analyzer-features div{
-
-width:90%;
-
-}
-
+    .analyzer-features div{
+        width:90%;
+    }
 
 }

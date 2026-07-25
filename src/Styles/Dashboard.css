@@ -1,163 +1,97 @@
 .dashboard{
-
     min-height:100vh;
     padding:60px 8%;
-    background:#f8fafc;
-
+    background:#F9FAFB;
 }
-
 
 .dashboard h1{
-
     text-align:center;
     font-size:42px;
-    color:#0f172a;
+    color:#111827;
     margin-bottom:40px;
-
 }
 
-
-
 .dashboard-content{
-
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
-
 }
-
-
-
 
 .resume-card,
 .score-card,
 .result-card,
 .suggestion-card{
-
-    background:white;
+    background:#FFFFFF;
     padding:30px;
     border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    transition:0.3s;
-
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    border-top:4px solid #F59E0B;
+    transition:all 0.3s ease;
 }
-
-
 
 .resume-card:hover,
 .score-card:hover,
 .result-card:hover,
 .suggestion-card:hover{
-
-    transform:translateY(-5px);
-
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
 }
-
-
-
-
 
 .resume-card h2,
 .score-card h2,
 .result-card h2,
 .suggestion-card h2{
-
-    color:#1e293b;
+    color:#111827;
     margin-bottom:20px;
-
 }
-
-
-
-
 
 .resume-card p{
-
-    color:#2563eb;
+    color:#F59E0B;
     font-weight:600;
     word-break:break-word;
-
 }
-
-
-
-
 
 .score-card{
-
     text-align:center;
-
 }
-
-
 
 .score-card h1{
-
     font-size:60px;
-    color:#2563eb;
+    color:#F59E0B;
     margin:10px;
-
 }
-
-
-
-
 
 .result-card p{
-
     padding:10px;
     margin:8px 0;
-    background:#f1f5f9;
+    background:#F3F4F6;
+    border-left:4px solid #F59E0B;
     border-radius:10px;
-    color:#334155;
-
+    color:#374151;
 }
-
-
-
-
 
 .suggestion-card{
-
     grid-column:1/-1;
-
 }
-
-
 
 .suggestion-card p{
-
     font-size:18px;
     line-height:1.6;
-    color:#475569;
-
+    color:#4B5563;
 }
-
-
-
 
 @media(max-width:768px){
 
-
     .dashboard{
-
         padding:40px 5%;
-
     }
-
 
     .dashboard h1{
-
         font-size:32px;
-
     }
-
 
     .score-card h1{
-
         font-size:45px;
-
     }
-
 
 }

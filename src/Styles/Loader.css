@@ -1,130 +1,74 @@
 .loader-container{
-
-min-height:400px;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:40px;
-
+    min-height:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    background:#F9FAFB;
 }
-
-
 
 .loader-circle{
-
-width:80px;
-
-height:80px;
-
-border-radius:50%;
-
-border:8px solid #e2e8f0;
-
-border-top:8px solid #2563eb;
-
-animation:spin 1s linear infinite;
-
-margin-bottom:30px;
-
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    border:8px solid #E5E7EB;
+    border-top:8px solid #F59E0B;
+    animation:spin 1s linear infinite;
+    margin-bottom:30px;
 }
-
-
 
 @keyframes spin{
 
-
-100%{
-
-transform:rotate(360deg);
-
-}
-
+    100%{
+        transform:rotate(360deg);
+    }
 
 }
-
-
 
 .loader-container h2{
-
-font-size:28px;
-
-color:#0f172a;
-
-margin-bottom:15px;
-
+    font-size:28px;
+    color:#111827;
+    margin-bottom:15px;
 }
-
-
 
 .loader-container p{
-
-color:#64748b;
-
-font-size:16px;
-
-margin-bottom:30px;
-
+    color:#6B7280;
+    font-size:16px;
+    margin-bottom:30px;
 }
-
-
 
 .analysis-list{
-
-display:flex;
-
-flex-direction:column;
-
-gap:15px;
-
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
-
-
 
 .analysis-list div{
-
-background:white;
-
-padding:12px 25px;
-
-border-radius:20px;
-
-box-shadow:
-
-0 5px 20px rgba(0,0,0,0.08);
-
-color:#16a34a;
-
-font-weight:500;
-
+    background:#FFFFFF;
+    padding:12px 25px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    border-left:4px solid #F59E0B;
+    color:#111827;
+    font-weight:600;
+    transition:0.3s ease;
 }
 
-
-
+.analysis-list div:hover{
+    transform:translateX(6px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.18);
+}
 
 @media(max-width:600px){
 
+    .loader-container h2{
+        font-size:22px;
+    }
 
-.loader-container h2{
-
-font-size:22px;
-
-}
-
-
-
-.loader-container p{
-
-font-size:14px;
-
-}
-
+    .loader-container p{
+        font-size:14px;
+    }
 
 }

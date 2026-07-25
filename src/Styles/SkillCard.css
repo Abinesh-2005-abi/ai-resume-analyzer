@@ -1,123 +1,65 @@
 .skill-card{
-
-background:white;
-
-padding:25px;
-
-border-radius:20px;
-
-width:280px;
-
-box-shadow:
-
-0 10px 30px rgba(0,0,0,0.08);
-
-transition:0.3s;
-
+    background:#FFFFFF;
+    padding:25px;
+    border-radius:20px;
+    width:280px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    border-top:4px solid #F59E0B;
+    transition:all 0.3s ease;
 }
-
-
 
 .skill-card:hover{
-
-transform:translateY(-5px);
-
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
 }
-
-
 
 .skill-header{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-margin-bottom:20px;
-
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
 }
-
-
 
 .skill-header h3{
-
-font-size:22px;
-
-color:#1e293b;
-
+    font-size:22px;
+    color:#111827;
 }
-
-
 
 .skill-header span{
-
-color:#2563eb;
-
-font-size:18px;
-
-font-weight:bold;
-
+    color:#F59E0B;
+    font-size:18px;
+    font-weight:bold;
 }
-
-
 
 .progress-container{
-
-height:12px;
-
-background:#e2e8f0;
-
-border-radius:20px;
-
-overflow:hidden;
-
+    height:12px;
+    background:#E5E7EB;
+    border-radius:20px;
+    overflow:hidden;
 }
-
-
 
 .progress-bar{
-
-height:100%;
-
-background:
-
-linear-gradient(
-90deg,
-#2563eb,
-#06b6d4
-);
-
-border-radius:20px;
-
-transition:0.5s;
-
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #F59E0B,
+        #FBBF24
+    );
+    border-radius:20px;
+    transition:0.5s;
 }
-
-
 
 .skill-card p{
-
-margin-top:15px;
-
-color:#64748b;
-
-font-size:14px;
-
+    margin-top:15px;
+    color:#6B7280;
+    font-size:14px;
+    line-height:1.6;
 }
-
-
-
-
 
 @media(max-width:700px){
 
-
-.skill-card{
-
-width:90%;
-
-}
-
+    .skill-card{
+        width:90%;
+    }
 
 }

@@ -1,139 +1,71 @@
 .navbar{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:20px 8%;
-
-background:white;
-
-box-shadow:
-0 5px 20px rgba(0,0,0,0.08);
-
-position:sticky;
-
-top:0;
-
-z-index:1000;
-
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    box-shadow:0 5px 20px rgba(0,0,0,0.25);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
-
-
 
 .logo{
-
-font-size:28px;
-
-font-weight:700;
-
-color:#2563eb;
-
+    font-size:28px;
+    font-weight:700;
+    color:#fbbf24;
 }
-
-
 
 .logo span{
-
-color:#06b6d4;
-
+    color:#f59e0b;
 }
-
-
 
 .nav-links{
-
-display:flex;
-
-align-items:center;
-
-gap:30px;
-
+    display:flex;
+    align-items:center;
+    gap:30px;
 }
-
-
 
 .nav-links a{
-
-font-size:16px;
-
-font-weight:500;
-
-color:#1e293b;
-
-transition:0.3s;
-
+    font-size:16px;
+    font-weight:500;
+    color:#f3f4f6;
+    transition:0.3s;
 }
-
-
 
 .nav-links a:hover{
-
-color:#2563eb;
-
+    color:#fbbf24;
 }
-
-
 
 .signup-btn{
-
-background:#2563eb;
-
-color:white !important;
-
-padding:12px 28px;
-
-border-radius:30px;
-
+    background:#f59e0b;
+    color:#111827 !important;
+    padding:12px 28px;
+    border-radius:30px;
+    font-weight:600;
 }
-
-
 
 .signup-btn:hover{
-
-background:#1d4ed8;
-
+    background:#fbbf24;
 }
-
-
 
 /* Mobile Responsive */
 
-
 @media(max-width:768px){
 
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+        padding:20px 5%;
+    }
 
-.navbar{
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
 
-flex-direction:column;
-
-gap:20px;
-
-padding:20px 5%;
-
-}
-
-
-
-.nav-links{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:15px;
-
-}
-
-
-
-.logo{
-
-font-size:24px;
-
-}
-
-
+    .logo{
+        font-size:24px;
+    }
 }
